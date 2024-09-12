@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Aniversário - Carmina Marinho</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Foto da aniversariante -->
+      <div class="photo-container">
+        <img src="carmina.png" alt="" class="photo">
+      </div>
+
+      <!-- Conteúdo do convite -->
+      <h1>
+        Celebre conosco os <span class="accent">75 anos</span> de<br>Carmina Marinho
+      </h1>
+      <p>
+        Com grande alegria, convidamos você para compartilhar este momento especial conosco!
+      </p>
+
+      <div class="details">
+        <p><strong>Data:</strong> 12/10/2024</p>
+        <p><strong>Horário:</strong> 19:00</p>
+        <p><strong>Local:</strong> Residência da aniversariante</p>
+        <p><strong>Cidade:</strong> Miracema do Tocantins</p>
+      </div>
+
+      <p class="message">
+        "A vida é uma jornada incrível, e cada ano é uma nova página dessa história. Venha celebrar
+        comigo as 75 páginas mais emocionantes que já escrevi. Sua presença será o presente mais valioso
+        que posso receber!"
+      </p>
+      <footer style="margin-top: 30px; font-size: 0.8em; color: #888;">
+        Desenvolvido por Nelson Marinho
+      </footer>
+    </div>
+
+    <script>
+      function createConfetti() {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+          confetti.remove();
+        }, 5000);
+      }
+
+      setInterval(createConfetti, 300);
+    </script>
+  </body>
+</html>
